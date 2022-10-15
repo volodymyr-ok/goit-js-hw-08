@@ -32,8 +32,10 @@ function populateByStorage() {
 function clearStorage(evt) {
   evt.preventDefault();
 
-  localStorage.removeItem('feedback-form-state');
   console.log(storage);
+  storage.email = '';
+  storage.message = '';
+  localStorage.removeItem('feedback-form-state');
 
   evt.currentTarget.reset();
 }
